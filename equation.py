@@ -1,4 +1,4 @@
-from sympy import symbols
+from sympy import *
 from sympy.parsing.sympy_parser import standard_transformations, implicit_multiplication_application, parse_expr
 import math
 
