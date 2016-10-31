@@ -1,30 +1,31 @@
-from sympy import Eq
-
 from equation import Equation
 
+
 class RegulaFalsi(Equation):
-
-    def solveRegula(self, a, b, error):
-        x = 0
-        while(True):
-            x = self.getInterval(a, b)
-            if x == 0:
-                break
+    def solve_regula(self, section_a, section_b, error_limit):
+        error = 100
+        while error >= error_limit:
+            interval = self.get_interval(section_a, section_b)
+            # f_interval = self.solve(interval)
+            if self.below_to_zero(section_a, interval):
+                section_b = interval
             else:
-                if self.belowToZero(a,x):
-                    b = x
-                else:
-                    a = x
-            print(str(x))
+                section_a = interval
 
-            if self.getPercentualError(a,b) < error:
-                break
-        return x
+            error = self.get_percentual_error(section_a, section_b)
+            self.sections.append({'a': section_a,
+                                  'b': section_b,
+                                  'interval': interval,
+                                  # 'f(interval)': f_interval,
+                                  'error': error})
 
-    def getInterval(self, a, b):
-        return (Eq(self.solve(a) * b) - (self.solve(b) * a)) / (self.solve(a) - self.solve(b))
+        return interval
+
+    def get_interval(self, a, b):
+        return (float(self.solve(a) * b) - (self.solve(b) * a)) / (self.solve(a) - self.solve(b))
 
 
 if __name__ == '__main__':
-    falsi = RegulaFalsi("(e**-x)-ln(x)","x")
-    falsi.solveRegula(1,2,1)
+    falsi = RegulaFalsi("((x)**3)+(4(x)**2)-10", 'x')
+    print(falsi.solve_regula(1, 2, 0.2))
+    print(falsi.get_sections())

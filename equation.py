@@ -2,32 +2,35 @@ from sympy import *
 from sympy.parsing.sympy_parser import standard_transformations, implicit_multiplication_application, parse_expr
 import math
 
+
 class Equation(object):
-    def __init__(self, ecuation,variable):
+    def __init__(self, ecuation, variable):
         try:
-            transformations = (standard_transformations+(implicit_multiplication_application,))
+            transformations = (standard_transformations + (implicit_multiplication_application,))
             self.variable = symbols(variable)
-            self.ecuation = parse_expr(ecuation,transformations=transformations)
+            self.equation = parse_expr(ecuation, transformations=transformations)
             self.sections = []
         except:
             return "Expression cannot be formatted"
 
-    def belowToZero(self, section_a, section_b):
+    def below_to_zero(self, section_a, section_b):
         function_from_a = self.solve(section_a)
         function_from_b = self.solve(section_b)
-        return (function_from_a*function_from_b < 0)
+        return function_from_a * function_from_b < 0
 
-    def getAbsoluteError(self,actual,last):
-        return (actual - last)
+    @staticmethod
+    def get_absolute_error(actual, last):
+        return actual - last
 
-    def getPercentualError(self,actual,last):
-        return (math.fabs((actual-last)/actual)*100)
+    @staticmethod
+    def get_percentual_error(last, actual):
+        return math.fabs((actual - last) / actual) * 100
 
     def solve(self, section):
-        return self.ecuation.subs({self.variable:section})
+        return self.equation.subs({self.variable: section})
 
-    def getExpression(self):
-        return self.ecuation
+    def get_expression(self):
+        return self.equation
 
-    def getSections(self):
+    def get_sections(self):
         return self.sections
