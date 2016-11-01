@@ -3,11 +3,11 @@ Numeric analysis algorithms library
 
 ##Abstract
 This is a library set for numerical analysis, in this set you will find many methods: 
- - Bisection
- - Regula Falsi
- - Newton-Raphson
- - Secant
- - Fixed Point
+ - **Bisection**
+ - **Regula Falsi**
+ - **Newton-Raphson**
+ - **Secant**
+ - **Fixed Point**
  - Horner
  - Gauss
  - Jacobi
