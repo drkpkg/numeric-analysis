@@ -10,6 +10,7 @@ class Equation(object):
             self.variable = symbols(variable)
             self.equation = parse_expr(equation, transformations=transformations)
             self.derivate_equation = diff(self.equation)
+            self.integrate_equation = integrate(self.equation)
             self.sections = []
         except:
             return "Expression cannot be formatted"

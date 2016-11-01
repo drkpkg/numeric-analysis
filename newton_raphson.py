@@ -17,3 +17,5 @@ class NewtonRaphson(Equation):
 # newton = NewtonRaphson("cos(x) - x**3", 'x')
 # newton.solve_newton(0.5, 0.1)
 # print(newton.sections)
+# print(newton.derivate_equation)
+# print(newton.integrate_equation)
