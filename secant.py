@@ -16,6 +16,6 @@ class Secant(Equation):
             self.sections.append({'n': iteration, 'x' + str(iteration): new_section, 'error': error})
             iteration += 1
 
-secant = Secant("x**3+2x**2+10x-20", 'x')
-secant.solve_secant(0, 1, 0.1)
-print(secant.get_sections())
+# secant = Secant("x**3+2x**2+10x-20", 'x')
+# secant.solve_secant(0, 1, 0.1)
+# print(secant.get_sections())

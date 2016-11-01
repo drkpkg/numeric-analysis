@@ -9,6 +9,7 @@ class Equation(object):
             transformations = (standard_transformations + (implicit_multiplication_application,))
             self.variable = symbols(variable)
             self.equation = parse_expr(ecuation, transformations=transformations)
+            self.derivate_equation = diff(parse_expr(ecuation, transformations=transformations))
             self.sections = []
         except:
             return "Expression cannot be formatted"
@@ -28,6 +29,9 @@ class Equation(object):
 
     def solve(self, section):
         return self.equation.subs({self.variable: section})
+
+    def solve_derivate(self, section):
+        return self.derivate_equation.subs({self.variable: section})
 
     def get_expression(self):
         return self.equation
