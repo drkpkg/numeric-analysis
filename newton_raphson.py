@@ -9,8 +9,8 @@ class NewtonRaphson(Equation):
 
         while error > error_limit:
             next_value = x - (self.solve(x) / self.solve_derivate(x))
-            error = self.get_percentual_error(x, next_value)
             self.sections.append({'x': next_value, 'error': error})
+            error = self.get_percentual_error(x, next_value)
             x = next_value
 
 

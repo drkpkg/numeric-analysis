@@ -4,12 +4,12 @@ import math
 
 
 class Equation(object):
-    def __init__(self, ecuation, variable):
+    def __init__(self, equation, variable):
         try:
             transformations = (standard_transformations + (implicit_multiplication_application,))
             self.variable = symbols(variable)
-            self.equation = parse_expr(ecuation, transformations=transformations)
-            self.derivate_equation = diff(parse_expr(ecuation, transformations=transformations))
+            self.equation = parse_expr(equation, transformations=transformations)
+            self.derivate_equation = diff(self.equation)
             self.sections = []
         except:
             return "Expression cannot be formatted"
