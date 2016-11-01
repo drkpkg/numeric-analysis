@@ -26,14 +26,12 @@ class Bisection(Equation):
                         section_b = interval
                     else:
                         section_a = interval
-
-            # return interval
         except:
             return "Cannot solve bisection"
 
 
-# if __name__ == '__main__':
-#     bisection = Bisection("((x)**3)+(4(x)**2)-10", 'x')
-#     bisection.solve_bisection(1, 2, 0.02)
-#     print(bisection.derivate_equation)
-#     print(bisection.get_sections())
+if __name__ == '__main__':
+    bisection = Bisection("((x)**3)+(4(x)**2)-10", 'x')
+    bisection.solve_bisection(1, 2, 0.02)
+    print(bisection.derivate_equation)
+    print(bisection.get_sections())

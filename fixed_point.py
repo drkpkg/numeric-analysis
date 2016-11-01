@@ -11,6 +11,7 @@ class FixedPoint(Equation):
             x = next_value
 
 
-# fpoint = FixedPoint("E**-x", 'x')
-# fpoint.solve_fixed(1, 0.01)
-# print(fpoint.sections)
+if __name__ == '__main__':
+    fpoint = FixedPoint("E**-x", 'x')
+    fpoint.solve_fixed(1, 0.01)
+    print(fpoint.sections)

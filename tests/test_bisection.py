@@ -7,7 +7,7 @@ class TestBisection(unittest.TestCase):
         self.bisectionObject = Bisection("3x**2+5x", 'x')
 
     def test_should_get_interval(self):
-        self.assertEqual(6, self.bisectionObject.getInterval(7, 5))
+        self.assertEqual(6, self.bisectionObject.get_interval(7, 5))
 
     def test_should_be_below_to_zero(self):
         self.assertEqual(False, self.bisectionObject.below_to_zero(7, -5))
@@ -22,7 +22,7 @@ class TestBisection(unittest.TestCase):
         self.assertEqual(8, self.bisectionObject.solve(8))
 
     def test_should_solve_bisection(self):
-        self.assertEqual('Cannot solve bisection', self.bisectionObject.solveBisection(0, 0, -1))
+        self.assertEqual('Cannot solve bisection', self.bisectionObject.solve_bisection(0, 0, -1))
 
 
 if __name__ == '__main__':
