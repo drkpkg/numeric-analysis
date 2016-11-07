@@ -8,7 +8,7 @@ This is a library set for numerical analysis, in this set you will find many met
  - **Newton-Raphson**
  - **Secant**
  - **Fixed Point**
- - Horner
+ - **Horner**
  - Gauss
  - Jacobi
  - Lagrange Polinomy
