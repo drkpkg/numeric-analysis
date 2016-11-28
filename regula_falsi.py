@@ -22,7 +22,7 @@ class RegulaFalsi(Equation):
         return (float(self.solve(a) * b) - (self.solve(b) * a)) / (self.solve(a) - self.solve(b))
 
 
-if __name__ == '__main__':
-    falsi = RegulaFalsi("((x)**3)+(4(x)**2)-10", 'x')
-    falsi.solve_regula(1, 2, 0.2)
-    print(falsi.get_sections())
+# if __name__ == '__main__':
+#     falsi = RegulaFalsi("((x)**3)+(4(x)**2)-10", 'x')
+#     falsi.solve_regula(1, 2, 0.2)
+#     print(falsi.get_sections())

@@ -17,7 +17,7 @@ class Secant(Equation):
             error = self.get_percentual_error(section_a, section_b)
             iteration += 1
 
-if __name__ == '__main__':
-    secant = Secant("x**3+2x**2+10x-20", 'x')
-    secant.solve_secant(0, 1, 0.1)
-    print(secant.get_sections())
+# if __name__ == '__main__':
+#     secant = Secant("x**3+2x**2+10x-20", 'x')
+#     secant.solve_secant(0, 1, 0.1)
+#     print(secant.get_sections())

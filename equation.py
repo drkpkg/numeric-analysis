@@ -12,8 +12,8 @@ class Equation(object):
             self.derivate_equation = diff(self.equation)
             self.integrate_equation = integrate(self.equation)
             self.sections = []
-        except:
-            return "Expression cannot be formatted"
+        except ValueError:
+            print("Expression cannot be formatted")
 
     def below_to_zero(self, section_a, section_b):
         function_from_a = self.solve(section_a)

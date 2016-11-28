@@ -1,13 +1,14 @@
 from sympy import poly, degree, symbols
 from sympy.parsing.sympy_parser import standard_transformations, implicit_multiplication_application, parse_expr
 
-class Gauss():
+
+class Gauss:
     def __init__(self, *args):
         self.equations = []
         self.terms = []
 
         self.__parse_args(args, self.equations, self.terms)
-        print(self.equations,self.terms)
+        print(self.equations, self.terms)
 
         try:
             transformations = (standard_transformations + (implicit_multiplication_application,))
@@ -22,7 +23,6 @@ class Gauss():
         except:
             return "Expression cannot be formatted"
 
-
     @staticmethod
     def __parse_args(args, equations, terms):
         for i in args:
@@ -32,4 +32,4 @@ class Gauss():
 
 
 if __name__ == '__main__':
-    gauss = Gauss("2x = 1","5y = 10","4m = 9")
+    gauss = Gauss("2x = 1", "5y = 10", "4m = 9")

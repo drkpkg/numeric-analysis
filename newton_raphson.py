@@ -13,7 +13,8 @@ class NewtonRaphson(Equation):
             error = self.get_percentual_error(x, next_value)
             x = next_value
 
-if __name__ == '__main__':
-    newton = NewtonRaphson("cos(x) - x**3", 'x')
-    newton.solve_newton(0.5, 0.1)
-    print(newton.sections)
+
+# if __name__ == '__main__':
+#     newton = NewtonRaphson("cos(x) - x**3", 'x')
+#     newton.solve_newton(0.5, 0.1)
+#     print(newton.sections)

@@ -1,6 +1,7 @@
 from sympy import poly, degree, symbols, Symbol, Poly
 from sympy.parsing.sympy_parser import standard_transformations, implicit_multiplication_application, parse_expr
 
+
 class Horner:
     def __init__(self, polynomial, polynomial_divider, variable):
         try:
@@ -15,8 +16,8 @@ class Horner:
             self.quotient = None
             self.residue = None
             self.sections = []
-        except:
-            return "Expression cannot be formatted"
+        except TypeError:
+            print("Expression cannot be formatted")
 
     def get_degree(self, pol):
         return degree(pol, self.variable)
@@ -25,7 +26,7 @@ class Horner:
         dividend = self.polynomial.all_coeffs()
         divider = self.inverted_poly()
         position_dividend = 1
-        distance = len(dividend)-(len(divider)-1)
+        distance = len(dividend) - (len(divider) - 1)
         i = 0
 
         while i < distance:
@@ -60,7 +61,6 @@ class Horner:
 
 # horner = Horner("38x**4-65x**3+0x**2+0x+27", "2x**2-5x+3", 'x')
 # print(horner.solve_horner())
-
-horner = Horner("8x**5+14x**4+5x**3+16x**2+3x+2", "4x**2+x+3", 'x')
-horner.solve_horner()
-print(horner.quotient, horner.residue)
+# horner = Horner("8x**5+14x**4+5x**3+16x**2+3x+2", "4x**2+x+3", 'x')
+# horner.solve_horner()
+# print(horner.quotient, horner.residue)
