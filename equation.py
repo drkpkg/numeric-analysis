@@ -12,7 +12,7 @@ class Equation(object):
             self.derivate_equation = diff(self.equation)
             self.integrate_equation = integrate(self.equation)
             self.sections = []
-        except ValueError:
+        except TypeError:
             print("Expression cannot be formatted")
 
     def below_to_zero(self, section_a, section_b):

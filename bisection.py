@@ -26,8 +26,8 @@ class Bisection(Equation):
                         section_b = interval
                     else:
                         section_a = interval
-        except:
-            return "Cannot solve bisection"
+        except TypeError:
+            print("Expression cannot be formatted")
 
 
 # if __name__ == '__main__':
