@@ -9,8 +9,8 @@ This is a library set for numerical analysis, in this set you will find many met
  - **Secant**
  - **Fixed Point**
  - **Horner**
- - Gauss
- - Jacobi
+ - **Gauss**
+ - **Jacobi**
  - Lagrange Polinomy
  - Lagrange Interpolation
  - Finite Difference
