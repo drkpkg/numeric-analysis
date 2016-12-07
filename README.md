@@ -12,7 +12,6 @@ This is a library set for numerical analysis, in this set you will find many met
  - **Gauss**
  - **Jacobi**
  - Lagrange Polinomy
- - Lagrange Interpolation
  - Finite Difference
  - Numeric Integration - Newton Rule
  - Trapezoidal rule
