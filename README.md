@@ -11,8 +11,8 @@ This is a library set for numerical analysis, in this set you will find many met
  - **Horner**
  - **Gauss**
  - **Jacobi**
- - Lagrange Polinomy
- - Finite Difference
+ - **Lagrange Polinomy**
+ - **Finite Difference**
  - Numeric Integration - Newton Rule
  - Trapezoidal rule
  - Simpson 3/8
