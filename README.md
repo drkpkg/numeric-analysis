@@ -16,7 +16,7 @@ This is a library set for numerical analysis, in this set you will find many met
  - Numeric Integration - Newton Rule
  - **Trapezoidal rule**
  - **Simpson 3/8**
- - Romber
+ - Romberg
  - Gauss - Integration
  - Euler Ordinary
  - Adam's Method
