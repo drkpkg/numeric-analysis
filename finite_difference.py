@@ -24,8 +24,8 @@ class Finite(Equation):
         for k in self.x:
             self.fx.append(float(self.solve(k)))
 
-if __name__ == '__main__':
-    finite = Finite("(sin(x)+(x**2)-2x)/(x**2+1)", 'x')
-    print(finite.solve_finite_down(4, 0.2))
-    print(finite.solve_finite_up(4, 0.2))
-    print(finite.solve_finite_central(4, 0.2))
+# if __name__ == '__main__':
+#     finite = Finite("(sin(x)+(x**2)-2x)/(x**2+1)", 'x')
+#     print(finite.solve_finite_down(4, 0.2))
+#     print(finite.solve_finite_up(4, 0.2))
+#     print(finite.solve_finite_central(4, 0.2))
