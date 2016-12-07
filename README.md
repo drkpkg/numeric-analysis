@@ -14,8 +14,8 @@ This is a library set for numerical analysis, in this set you will find many met
  - **Lagrange Polinomy**
  - **Finite Difference**
  - Numeric Integration - Newton Rule
- - Trapezoidal rule
- - Simpson 3/8
+ - **Trapezoidal rule**
+ - **Simpson 3/8**
  - Romber
  - Gauss - Integration
  - Euler Ordinary
