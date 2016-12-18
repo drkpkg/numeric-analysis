@@ -1,0 +1,47 @@
+{% extends "app.html" %}
+{% block title %}
+    <title>Método de la bisección</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='javascripts/biseccion.js') }}"></script>
+    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="ui grid">
+        <div class="eight wide column">
+            <div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
+        </div>
+        <div class="eight wide column">
+
+            <form id="form" class="ui form">
+                <div class="field">
+                    <label for="equation">Expresión</label>
+                    <input id="equation" name="equation" type="text">
+                </div>
+                <div class="three field">
+                    <div class="field">
+                        <label for="a">Intervalo A</label>
+                        <input id="a" name="a" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="b">Intervalo B</label>
+                        <input id="b" name="b" type="text">
+                    </div>
+                    <div class="field">
+                        <label for="error">Límite de error</label>
+                        <input id="error" name="error" type="number" min="0.0" step="0.001">
+                    </div>
+                </div>
+
+              <div class="ui submit button">Submit</div>
+              <div class="ui error message"></div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
