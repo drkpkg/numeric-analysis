@@ -1,21 +1,21 @@
 $(function(){
-    var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10],
-                                              axis:true,
-                                              zoom: {
-                                                  factorX:1.25,
-                                                  factorY:1.25,
-                                                  wheel:true,
-                                                  eps: 0.1
-                                                 }
-                                              });
-    initValidate(board);
+//    var board = JXG.JSXGraph.initBoard('box', {boundingbox: [-10, 10, 10, -10],
+//                                              axis:true,
+//                                              zoom: {
+//                                                  factorX:1.25,
+//                                                  factorY:1.25,
+//                                                  wheel:true,
+//                                                  eps: 0.1
+//                                                 }
+//                                              });
+    initValidate();
 });
 
-function initValidate(board){
+function initValidate(){
   $('#form')
   .form({
     onSuccess: function(event, fields) {
-        SubmitForm(fields, board);
+        SubmitForm(fields);
         event.preventDefault();
     },
     on: 'blur',
@@ -76,7 +76,7 @@ function initValidate(board){
   });
 }
 
-function SubmitForm(fields, board) {
+function SubmitForm(fields) {
     var valid = $(".ui.form").form('is valid');
     $.ajax({
         url: '/calcular_biseccion',
@@ -84,12 +84,15 @@ function SubmitForm(fields, board) {
         data: fields,
         success: function(data){
             $.each(data.data, function(index, element){
-                drawPoints(board, element.a,element.b, element.error);
+            $('#tboby-list').empty();
+                $.each(data.data, function(index, element){
+                    $('#tboby-list').append("<tr><td>" + element.a + "</td><td>"+ element.b + "</td><td>" + element.error + "%</td></tr>");
+                });
             });
         }
     });
 }
 
-function drawPoints(board, a, b, error){
-    board.create('point', [a,b],{name: error+'%', withLabel:true});
-}
+//function drawPoints(board, a, b, error){
+//    board.create('point', [a,b],{name: error+'%', withLabel:true});
+//}

@@ -2,6 +2,7 @@ import json
 from flask import Flask, request, jsonify
 from flask import render_template
 from lib.bisection import Bisection
+from lib.finite_difference import Finite
 from lib.fixed_point import FixedPoint
 from lib.gauss import Gauss
 from lib.horner import Horner
@@ -155,6 +156,23 @@ def calcular_lagrange():
 @app.route('/diferencia_finita')
 def diferencia_finita():
     return render_template('diferencia_finita.html')
+
+
+@app.route('/calcular_diferencia_finita', methods=['POST'])
+def calcular_diferencia_finita():
+    equation = str(request.form['equation'])
+    x = float(request.form['x'])
+    error = float(request.form['error'])
+    val = int(request.form['t'])
+    dff = Finite(equation, 'x')
+
+    if val == 0:
+        return jsonify(sections=dff.solve_finite_down(x, error))
+    elif val == 1:
+        return jsonify(sections=dff.solve_finite_central(x, error))
+    else:
+        return jsonify(sections=dff.solve_finite_down(x, error))
+
 
 
 @app.route('/trapecio')
