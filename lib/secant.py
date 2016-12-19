@@ -5,7 +5,9 @@ class Secant(Equation):
     def solve_secant(self, section_a, section_b, error_limit):
         error = 100
         iteration = 0
-        while error >= error_limit:
+        while True:
+            if error <= error_limit:
+                break
             f_section_a = self.solve(section_a)
             f_section_b = self.solve(section_b)
             new_section = float(section_b - (((section_b - section_a) / (f_section_b - f_section_a)) * f_section_b))

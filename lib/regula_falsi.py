@@ -4,7 +4,9 @@ from lib.equation import Equation
 class RegulaFalsi(Equation):
     def solve_regula(self, section_a, section_b, error_limit):
         error = 100
-        while error > error_limit:
+        while True:
+            if error <= error_limit:
+                break
             interval = self.get_interval(section_a, section_b)
             if self.below_to_zero(section_a, interval):
                 section_b = interval

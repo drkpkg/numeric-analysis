@@ -10,7 +10,9 @@ class Bisection(Equation):
     def solve_bisection(self, section_a, section_b, error_limit):
         try:
             error = 100
-            while error >= error_limit:
+            while True:
+                if error <= error_limit:
+                    break
                 interval = self.get_interval(section_a, section_b)
                 f_interval = self.solve(interval)
                 error = self.get_percentual_error(section_a, section_b)
