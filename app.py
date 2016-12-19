@@ -5,6 +5,7 @@ from lib.bisection import Bisection
 from lib.fixed_point import FixedPoint
 from lib.gauss import Gauss
 from lib.horner import Horner
+from lib.jacobi import Jacobi
 from lib.newton_raphson import NewtonRaphson
 from lib.regula_falsi import RegulaFalsi
 from lib.secant import Secant
@@ -125,6 +126,15 @@ def calcular_gauss():
 @app.route('/jacobi')
 def jacobi():
     return render_template('jacobi.html')
+
+
+@app.route('/calcular_jacobi', methods=['POST'])
+def calcular_jacobi():
+    eqs = str(request.form['equations']).split('\n')
+    limit = int(request.form['limit'])
+    jcb = Jacobi(eqs, limit=limit, var='x')
+    jcb.solve_jacobi()
+    return jsonify(sections=str(jcb.sections), eqc=str(jcb.eq_coeffs))
 
 
 @app.route('/lagrange_poli')

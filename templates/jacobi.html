@@ -1,0 +1,44 @@
+{% extends "app.html" %}
+{% block title %}
+    <title>Método de Jacobi</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='javascripts/jacobi.js') }}"></script>
+    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="ui grid">
+        <div class="eight wide column">
+            <form id="form" class="ui form">
+                <div class="field">
+                    <label>Expresiones</label>
+                    <textarea id="equations" name="equations" placeholder="Expresiones separadas por salto de linea"></textarea>
+                </div>
+                <div class="field">
+                    <label for="limit">Límite</label>
+                    <input id="limit" name="limit" type="text" min="0">
+                </div>
+              <div class="ui submit button">Submit</div>
+              <div class="ui error message"></div>
+            </form>
+        </div>
+        <div class="eight wide column">
+            <div class="ui form">
+                <div class="field">
+                    <label for="solution">Solución</label>
+                    <textarea id="solution" disabled></textarea>
+                </div>
+                <div class="field">
+                    <label for="solution">Solución</label>
+                    <input id="solution_sections" disabled type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
