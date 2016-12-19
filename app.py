@@ -11,6 +11,7 @@ from lib.lagrange_polinomy import Lagrange
 from lib.newton_raphson import NewtonRaphson
 from lib.regula_falsi import RegulaFalsi
 from lib.secant import Secant
+from lib.simpson import Simpson
 
 app = Flask(__name__)
 
@@ -173,6 +174,20 @@ def calcular_diferencia_finita():
     else:
         return jsonify(sections=dff.solve_finite_down(x, error))
 
+
+@app.route('/calcular_simpson', methods=['POST'])
+def calcular_simpson():
+    equation = str(request.form['equation'])
+    a = float(request.form['a'])
+    b = float(request.form['b'])
+    n = int(request.form['n'])
+    val = int(request.form['t'])
+    smp = Simpson(equation, 'x')
+
+    if val == 0:
+        return jsonify(sections=smp.solve_with_simple_simpson(a, b))
+    else:
+        return jsonify(sections=smp.solve_with_3_8_simpson(a, b, n))
 
 
 @app.route('/trapecio')
