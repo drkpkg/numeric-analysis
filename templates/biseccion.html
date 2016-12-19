@@ -15,9 +15,6 @@
 {% block body %}
     <div class="ui grid">
         <div class="eight wide column">
-            <div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
-        </div>
-        <div class="eight wide column">
 
             <form id="form" class="ui form">
                 <div class="field">
@@ -42,6 +39,19 @@
               <div class="ui submit button">Submit</div>
               <div class="ui error message"></div>
             </form>
+        </div>
+        <div class="eight wide column">
+            <table class="ui celled table">
+                <thead>
+                    <tr>
+                        <td>a</td>
+                        <td>b</td>
+                        <td>Error</td>
+                    </tr>
+                </thead>
+                <tbody id="tboby-list">
+                </tbody>
+            </table>
         </div>
     </div>
 {% endblock %}

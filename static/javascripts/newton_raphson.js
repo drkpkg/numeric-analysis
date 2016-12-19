@@ -30,7 +30,7 @@ function initValidate(){
         ]
       },
       a: {
-        identifier  : 'a',
+        identifier  : 'x',
         rules: [
           {
             type   : 'empty',
@@ -43,19 +43,6 @@ function initValidate(){
           {
             type: 'decimal[0..]',
             prompt: 'Numero tiene que ser mayor a cero'
-          }
-        ]
-      },
-      b: {
-        identifier  : 'b',
-        rules: [
-          {
-            type   : 'empty',
-            prompt : 'Ingrese valor'
-          },
-          {
-            type: 'decimal',
-            prompt: 'Tiene que ser un número'
           }
         ]
       },
@@ -79,15 +66,14 @@ function initValidate(){
 function SubmitForm(fields) {
     var valid = $(".ui.form").form('is valid');
     $.ajax({
-        url: '/calcular_biseccion',
+        url: '/calcular_nraphson',
         type: 'POST',
         data: fields,
         success: function(data){
-            $.each(data.data, function(index, element){
             $('#tboby-list').empty();
-                $.each(data.data, function(index, element){
-                    $('#tboby-list').append("<tr><td>" + element.a + "</td><td>"+ element.b + "</td><td>" + element.error + "%</td></tr>");
-                });
+            $.each(data.data, function(index, element){
+//                console.log("<tr><td>" + element.x + "</td><td>"+ element.error + "</td></tr>");
+                $('#tboby-list').append("<tr><td>" + element.x + "</td><td>"+ element.error + "%</td></tr>");
             });
         }
     });

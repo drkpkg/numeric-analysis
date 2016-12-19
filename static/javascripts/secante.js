@@ -79,15 +79,13 @@ function initValidate(){
 function SubmitForm(fields) {
     var valid = $(".ui.form").form('is valid');
     $.ajax({
-        url: '/calcular_biseccion',
+        url: '/calcular_secante',
         type: 'POST',
         data: fields,
         success: function(data){
-            $.each(data.data, function(index, element){
             $('#tboby-list').empty();
-                $.each(data.data, function(index, element){
-                    $('#tboby-list').append("<tr><td>" + element.a + "</td><td>"+ element.b + "</td><td>" + element.error + "%</td></tr>");
-                });
+            $.each(data.data, function(index, element){
+                $('#tboby-list').append("<tr><td>" + element.n + "</td><td>"+ element['x'+index] + "</td><td>" + element.error + "%</td></tr>");
             });
         }
     });

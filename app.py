@@ -2,6 +2,9 @@ import json
 from flask import Flask, request, jsonify
 from flask import render_template
 from lib.bisection import Bisection
+from lib.newton_raphson import NewtonRaphson
+from lib.regula_falsi import RegulaFalsi
+from lib.secant import Secant
 
 app = Flask(__name__)
 
@@ -24,7 +27,6 @@ def calcular_biseccion():
     e = float(request.form['error'])
     bs = Bisection(equation, 'x')
     bs.solve_bisection(a, b, e)
-    # json.dumps(bs.sections)
     return jsonify(data=bs.sections)
 
 
@@ -33,14 +35,46 @@ def regula_falsi():
     return render_template('regula_falsi.html')
 
 
+@app.route('/calcular_regula', methods=['POST'])
+def calcular_regula_falsi():
+    equation = str(request.form['equation'])
+    a = float(request.form['a'])
+    b = float(request.form['b'])
+    e = float(request.form['error'])
+    rf = RegulaFalsi(equation, 'x')
+    rf.solve_regula(a, b, e)
+    return jsonify(data=rf.sections)
+
+
 @app.route('/newton_raphson')
 def nraphson():
     return render_template('newton_raphson.html')
 
 
+@app.route('/calcular_nraphson', methods=['POST'])
+def calcular_nraphson():
+    equation = str(request.form['equation'])
+    x = float(request.form['x'])
+    e = float(request.form['error'])
+    nr = NewtonRaphson(equation, 'x')
+    nr.solve_newton(x, e)
+    return jsonify(data=nr.sections)
+
+
 @app.route('/secante')
 def secante():
     return render_template('secante.html')
+
+
+@app.route('/calcular_secante', methods=['POST'])
+def calcular_secante():
+    equation = str(request.form['equation'])
+    a = float(request.form['a'])
+    b = float(request.form['b'])
+    e = float(request.form['error'])
+    se = Secant(equation, 'x')
+    se.solve_secant(a, b, e)
+    return jsonify(data=se.sections)
 
 
 @app.route('/punto_fijo')
