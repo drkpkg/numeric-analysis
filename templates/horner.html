@@ -1,0 +1,44 @@
+{% extends "app.html" %}
+{% block title %}
+    <title>Método de horner</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='javascripts/horner.js') }}"></script>
+    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="ui grid">
+        <div class="eight wide column">
+            <form id="form" class="ui form">
+                <div class="field">
+                    <label for="equation_a">Expresión</label>
+                    <input id="equation_a" name="equation_a" type="text">
+                </div>
+                <div class="field">
+                    <label for="equation_b"></label>
+                    <input id="equation_b" name="equation_b" type="text">
+                </div>
+              <div class="ui submit button">Submit</div>
+              <div class="ui error message"></div>
+            </form>
+        </div>
+        <div class="eight wide column">
+            <div class="ui form">
+                <div class="field">
+                    <label for="quotient">Cociente</label>
+                    <input id="quotient" name="quotient" type="text" disabled>
+                </div>
+                <div class="field">
+                    <label for="residue">Residuo</label>
+                    <input id="residue" name="residue" type="text" disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

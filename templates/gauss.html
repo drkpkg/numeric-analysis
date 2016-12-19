@@ -1,0 +1,35 @@
+{% extends "app.html" %}
+{% block title %}
+    <title>Método de Gauss</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='javascripts/gauss.js') }}"></script>
+    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="ui grid">
+        <div class="eight wide column">
+            <form id="form" class="ui form">
+                <div class="field">
+                    <label>Expresiones</label>
+                    <textarea id="equations" name="equations" placeholder="Expresiones separadas por salto de linea"></textarea>
+                </div>
+              <div class="ui submit button">Submit</div>
+              <div class="ui error message"></div>
+            </form>
+        </div>
+        <div class="eight wide column">
+             <table class="ui celled table">
+                <tbody id="body-table">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

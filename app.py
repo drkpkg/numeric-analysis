@@ -2,6 +2,9 @@ import json
 from flask import Flask, request, jsonify
 from flask import render_template
 from lib.bisection import Bisection
+from lib.fixed_point import FixedPoint
+from lib.gauss import Gauss
+from lib.horner import Horner
 from lib.newton_raphson import NewtonRaphson
 from lib.regula_falsi import RegulaFalsi
 from lib.secant import Secant
@@ -82,14 +85,41 @@ def punto_fijo():
     return render_template('punto_fijo.html')
 
 
+@app.route('/calcular_punto_fijo', methods=['POST'])
+def calcular_punto_fijo():
+    equation = str(request.form['equation'])
+    x = float(request.form['x'])
+    e = float(request.form['error'])
+    fp = FixedPoint(equation, 'x')
+    fp.solve_fixed(x, e)
+    return jsonify(data=fp.sections)
+
+
 @app.route('/horner')
 def horner():
     return render_template('horner.html')
 
 
+@app.route('/calcular_horner', methods=['POST'])
+def calcular_horner():
+    a = str(request.form['equation_a'])
+    b = str(request.form['equation_b'])
+    hrn = Horner(a, b, 'x')
+    hrn.solve_horner()
+    return jsonify(data={'quotient': str(hrn.quotient.as_expr()), 'residue': str(hrn.residue.as_expr())})
+
+
 @app.route('/gauss')
 def gauss():
     return render_template('gauss.html')
+
+
+@app.route('/calcular_gauss', methods=['POST'])
+def calcular_gauss():
+    eqs = str(request.form['equations']).split('\n')
+    gss = Gauss(eqs, var='x')
+    gss.solve_gauss()
+    return jsonify(sections=str(gss.sections), eqc=str(gss.eq_coeffs))
 
 
 @app.route('/jacobi')
