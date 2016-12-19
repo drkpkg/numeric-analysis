@@ -6,6 +6,7 @@ from lib.fixed_point import FixedPoint
 from lib.gauss import Gauss
 from lib.horner import Horner
 from lib.jacobi import Jacobi
+from lib.lagrange_polinomy import Lagrange
 from lib.newton_raphson import NewtonRaphson
 from lib.regula_falsi import RegulaFalsi
 from lib.secant import Secant
@@ -140,6 +141,15 @@ def calcular_jacobi():
 @app.route('/lagrange_poli')
 def lagrange_poli():
     return render_template('lagrange_poli.html')
+
+
+@app.route('/calcular_lagrange', methods=['POST'])
+def calcular_lagrange():
+    lx = list(map(int, str(request.form['lx']).split(',')))
+    ly = list(map(int, str(request.form['ly']).split(',')))
+    lgr = Lagrange(lx, ly, 'x')
+    lgr.solve_lagrange()
+    return jsonify(sections=str(lgr.sections))
 
 
 @app.route('/diferencia_finita')
