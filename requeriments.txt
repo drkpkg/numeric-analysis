@@ -1,0 +1,9 @@
+Flask==0.10.1
+Jinja2==2.8
+Werkzeug==0.10.4
+certifi==2016.9.26
+chardet==2.3.0
+distribute==0.7.3
+gunicorn==19.6.0
+requests==0.0.0
+sympy==0.7.6.1

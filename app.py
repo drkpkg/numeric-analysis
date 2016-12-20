@@ -10,6 +10,7 @@ from lib.jacobi import Jacobi
 from lib.lagrange_polinomy import Lagrange
 from lib.newton_raphson import NewtonRaphson
 from lib.regula_falsi import RegulaFalsi
+from lib.romberg import Romberg
 from lib.secant import Secant
 from lib.simpson import Simpson
 from lib.trapezoidal_rule import Trapezoidal
@@ -200,6 +201,7 @@ def calcular_trapecio():
 def simpson():
     return render_template('simpson.html')
 
+
 @app.route('/calcular_simpson', methods=['POST'])
 def calcular_simpson():
     equation = str(request.form['equation'])
@@ -213,6 +215,21 @@ def calcular_simpson():
         return jsonify(sections=smp.solve_with_simple_simpson(a, b))
     else:
         return jsonify(sections=smp.solve_with_3_8_simpson(a, b, n))
+
+
+@app.route('/romberg')
+def romberg():
+    return render_template('romberg.html')
+
+
+@app.route('/calcular_romberg', methods=['POST'])
+def calcular_romberg():
+    equation = str(request.form['equation'])
+    a = float(request.form['a'])
+    b = float(request.form['b'])
+    n = int(request.form['level'])
+    rmbg = Romberg(equation, 'x')
+    return jsonify(result=str(rmbg.solve_romberg(a, b, n)))
 
 
 if __name__ == "__main__":

@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7f1cf68a-0c21-4ee9-938c-0254ed81809e" name="Default" comment="" />
+    <list default="true" id="7f1cf68a-0c21-4ee9-938c-0254ed81809e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Procfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/romberg.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/requeriments.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runtime.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/javascripts/romberg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/romberg.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/romber.py" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/equation.py" afterPath="$PROJECT_DIR$/lib/equation.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/javascripts/app.js" afterPath="$PROJECT_DIR$/static/javascripts/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/app.html" afterPath="$PROJECT_DIR$/templates/app.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/diferencia_finita.html" afterPath="$PROJECT_DIR$/templates/diferencia_finita.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/simpson.html" afterPath="$PROJECT_DIR$/templates/simpson.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/trapecio.html" afterPath="$PROJECT_DIR$/templates/trapecio.html" />
+    </list>
     <ignored path="metodos.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +40,8 @@
       <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-93">
-              <caret line="193" column="76" lean-forward="false" selection-start-line="193" selection-start-column="76" selection-end-line="193" selection-end-column="76" />
+            <state relative-caret-position="2700">
+              <caret line="194" column="76" lean-forward="false" selection-start-line="194" selection-start-column="76" selection-end-line="194" selection-end-column="76" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -35,7 +52,7 @@
       <file leaf-file-name="app.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/app.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
+            <state relative-caret-position="207">
               <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
               <folding />
             </state>
@@ -45,7 +62,7 @@
       <file leaf-file-name="bisection.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/bisection.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
+            <state relative-caret-position="210">
               <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding />
             </state>
@@ -55,7 +72,7 @@
       <file leaf-file-name="regula_falsi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/regula_falsi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
+            <state relative-caret-position="405">
               <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="48" />
               <folding />
             </state>
@@ -65,7 +82,7 @@
       <file leaf-file-name="newton_raphson.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/newton_raphson.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
+            <state relative-caret-position="300">
               <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
@@ -75,7 +92,7 @@
       <file leaf-file-name="secant.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/secant.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
+            <state relative-caret-position="270">
               <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding />
             </state>
@@ -84,10 +101,13 @@
       </file>
       <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding />
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="0">
+                <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -95,7 +115,7 @@
       <file leaf-file-name="trapezoidal_rule.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/trapezoidal_rule.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
+            <state relative-caret-position="555">
               <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
               <folding />
             </state>
@@ -105,7 +125,7 @@
       <file leaf-file-name="trapecio.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/javascripts/trapecio.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
+            <state relative-caret-position="1275">
               <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
               <folding />
             </state>
@@ -117,7 +137,11 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-              <folding />
+              <folding>
+                <marker date="1482275857555" expanded="true" signature="1860:2096" ph="..." />
+                <marker date="1482275857555" expanded="true" signature="1894:2081" ph="..." />
+                <marker date="1482275857555" expanded="true" signature="1930:2062" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -184,12 +208,12 @@
         <option value="$PROJECT_DIR$/static/javascripts/trapecio.js" />
         <option value="$PROJECT_DIR$/lib/trapezoidal_rule.py" />
         <option value="$PROJECT_DIR$/app.py" />
-        <option value="$PROJECT_DIR$/templates/app.html" />
         <option value="$PROJECT_DIR$/lib/bisection.py" />
         <option value="$PROJECT_DIR$/lib/regula_falsi.py" />
         <option value="$PROJECT_DIR$/lib/newton_raphson.py" />
         <option value="$PROJECT_DIR$/lib/secant.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/templates/app.html" />
       </list>
     </option>
   </component>
@@ -213,6 +237,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -287,7 +312,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -616,18 +640,18 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39709172" sideWeight="0.5048309" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32997763" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32744783" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32695374" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39709172" sideWeight="0.49516907" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35313" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32885906" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39709172" sideWeight="0.49516907" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="UnknownFeatures">
@@ -852,23 +876,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/trapecio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/trapecio.py" />
     <entry file="file://$PROJECT_DIR$/static/javascripts/simpson.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="116">
           <caret line="85" column="30" lean-forward="false" selection-start-line="85" selection-start-column="15" selection-end-line="85" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -876,13 +891,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding />
+          <folding>
+            <marker date="1482275857555" expanded="true" signature="1860:2096" ph="..." />
+            <marker date="1482275857555" expanded="true" signature="1894:2081" ph="..." />
+            <marker date="1482275857555" expanded="true" signature="1930:2062" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/static/javascripts/trapecio.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
+        <state relative-caret-position="1275">
           <caret line="85" column="32" lean-forward="false" selection-start-line="85" selection-start-column="32" selection-end-line="85" selection-end-column="32" />
           <folding />
         </state>
@@ -890,7 +909,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/trapezoidal_rule.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
+        <state relative-caret-position="555">
           <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
           <folding />
         </state>
@@ -900,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3">
           <caret line="163" column="38" lean-forward="false" selection-start-line="163" selection-start-column="38" selection-end-line="163" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,13 +926,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-180">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/bisection.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
+        <state relative-caret-position="210">
           <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding />
         </state>
@@ -922,7 +939,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/regula_falsi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
+        <state relative-caret-position="405">
           <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="48" />
           <folding />
         </state>
@@ -930,7 +947,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/newton_raphson.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
+        <state relative-caret-position="300">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
@@ -938,14 +955,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/secant.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
+        <state relative-caret-position="270">
           <caret line="18" column="41" lean-forward="false" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
         <state relative-caret-position="297">
           <caret line="35" column="0" lean-forward="true" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding />
@@ -954,8 +980,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-93">
-          <caret line="193" column="76" lean-forward="false" selection-start-line="193" selection-start-column="76" selection-end-line="193" selection-end-column="76" />
+        <state relative-caret-position="2700">
+          <caret line="194" column="76" lean-forward="false" selection-start-line="194" selection-start-column="76" selection-end-line="194" selection-end-column="76" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -964,7 +990,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/app.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
+        <state relative-caret-position="207">
           <caret line="64" column="31" lean-forward="false" selection-start-line="64" selection-start-column="31" selection-end-line="64" selection-end-column="31" />
           <folding />
         </state>

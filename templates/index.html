@@ -6,183 +6,132 @@
 {% block body %}
     <div class="ui cards">
         <div class="card">
-            <div class="image">
-              <img src="../static/images/biseccion.jpg">
-            </div>
             <div class="content">
               <div class="header">Método de la bisección</div>
               <div class="description">
                 En matemáticas, el método de bisección es un algoritmo de búsqueda de raíces que trabaja dividiendo el intervalo a la mitad y seleccionando el subintervalo que tiene la raíz.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('biseccion') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('biseccion') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/falsi.svg">
-            </div>
             <div class="content">
               <div class="header">Método de la regla falsa</div>
               <div class="description">
                 En cálculo numérico, el método de la regula falsi (regla del falso) o falsa posición es un método iterativo de resolución numérica de ecuaciones no lineales. El método combina el método de bisección y el método de la secante.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('regula_falsi') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('regula_falsi') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/nraphson.png">
-            </div>
             <div class="content">
               <div class="header">Método de Newton Raphson</div>
               <div class="description">
                 En análisis numérico, el método de Newton (conocido también como el método de Newton-Raphson o el método de Newton-Fourier) es un algoritmo para encontrar aproximaciones de los ceros o raíces de una función real.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('nraphson') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('nraphson') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/secante.png">
-            </div>
             <div class="content">
               <div class="header">Método de la secante</div>
               <div class="description">
                 El método de la secante: - Es un método abierto (método no acotado). - Se basa en trazar una recta entre (x0, f(x0)) y (x1, f(x1)) y en base a ello determinar un x2 que sería la intersección que tiene la recta con el eje de las abscisas.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('secante') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('secante') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/fixed.png">
-            </div>
             <div class="content">
               <div class="header">Método del punto fijo</div>
               <div class="description">
                 El método del punto fijo es un método iterativo que permite resolver sistemas de ecuaciones no necesariamente lineales. En particular se puede utilizar para determinar raíces de una función de la forma f ( x ) {\displaystyle f(x)} , siempre y cuando se cumplan los criterios de convergencia.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('punto_fijo') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('punto_fijo') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/horner.png">
-            </div>
             <div class="content">
               <div class="header">Método de Horner</div>
               <div class="description">
                 En el campo matemático del análisis numérico, el método de Horner, llamado así por William George Horner, es un método para evaluar de forma eficiente funciones polinómicas de una forma monomial.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('horner') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('horner') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/gauss.jpg">
-            </div>
             <div class="content">
               <div class="header">Método de Gauss</div>
               <div class="description">
                 Método de Gauss-Seidel. En análisis numérico el método de Gauss-Seidel es un método iterativo utilizado para resolver sistemas de ecuaciones lineales. El método se llama así en honor a los matemáticos alemanes Carl Friedrich Gauss y Philipp Ludwig von Seidel y es similar al método de Jacobi.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('gauss') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('gauss') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/jacobi.gif">
-            </div>
             <div class="content">
               <div class="header">Método de Jacobi</div>
               <div class="description">
                 En análisis numérico el método de Jacobi es un método iterativo, usado para resolver sistemas de ecuaciones lineales del tipo A x = b {\displaystyle A\mathbf {x} =\mathbf {b} } . El algoritmo toma su nombre del matemático alemán Carl Gustav Jakob Jacobi.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('jacobi') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('jacobi') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/lagrange.png">
-            </div>
             <div class="content">
               <div class="header">Método del polinomio de Lagrange</div>
               <div class="description">
                 En análisis numérico, el polinomio de Lagrange, llamado así en honor a Joseph-Louis de Lagrange, es una forma de presentar el polinomio que interpola un conjunto de puntos dado. Lagrange publicó este resultado en 1795, pero lo descubrió Edward Waring en 1779 y fue redescubierto más tarde por Leonhard Euler en 1783.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('lagrange_poli') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('lagrange_poli') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/trapecio.png">
-            </div>
             <div class="content">
               <div class="header">Método del trapecio</div>
               <div class="description">
                 La función f(x) (en azul) es aproximada por la función lineal (en rojo). En análisis numérico la regla del trapecio es un método de integración, es decir, un método para calcular aproximadamente el valor de una integral definida.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('trapecio') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('trapecio') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/finite.png">
-            </div>
             <div class="content">
               <div class="header">Método de la diferencia finita</div>
               <div class="description">
                 Así que se pueden usar diferencias finitas para aproximar derivadas. Esta técnica se emplea a menudo en análisis numérico, especialmente en ecuaciones diferenciales numéricas ordinarias, ecuaciones en diferencias y ecuación en derivadas parciales.
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('diferencia_finita') }}" class="ui teal button">Ver método</a>
-            </div>
+            <a href="{{ url_for('diferencia_finita') }}" class="ui bottom attached button">Ver método</a>
         </div>
 
         <div class="card">
-            <div class="image">
-              <img src="../static/images/simpson.png">
-            </div>
             <div class="content">
               <div class="header">Método de Simpson</div>
               <div class="description">
                 En integración numérica, una forma de aproximar una integral definida en un intervalo [a,b] es mediante la regla del trapecio, es decir, que sobre cada subintervalo en el que se divide [a,b] se aproxima f por un polinomio de primer grado, para luego calcular la integral como suma de las áreas de los trapecios formados
               </div>
             </div>
-            <div class="extra content">
-              <a href="{{ url_for('simpson') }}" class="ui teal button">Ver método</a>
+            <a href="{{ url_for('simpson') }}" class="ui bottom attached button">Ver método</a>
+        </div>
+        <div class="card">
+            <div class="content">
+              <div class="header">Método de Romberg</div>
+              <div class="description">
+                  En análisis numérico, el Método de Romberg genera una matriz triangular cuyos elementos son estimaciones numéricas de la integral definida usando la extrapolación de Richardson de forma reiterada en la regla del trapecio.
+              </div>
             </div>
+            <a href="{{ url_for('romberg') }}" class="ui bottom attached button">Ver método</a>
         </div>
     </div>
 {% endblock %}
