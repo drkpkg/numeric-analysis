@@ -5,4 +5,5 @@ $(function(){
     $('.deploy').click(function(){
         $('.ui.labeled.icon.sidebar').sidebar('toggle');
     });
+    $('.ui.dropdown').dropdown();
 });
