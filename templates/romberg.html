@@ -1,0 +1,51 @@
+{% extends "app.html" %}
+{% block title %}
+    <title>Método de Romberg</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraph.css" />
+{% endblock %}
+
+{% block js %}
+    <script src="{{ url_for('static', filename='javascripts/romberg.js') }}"></script>
+    <script type="text/javascript" src="http://jsxgraph.uni-bayreuth.de/distrib/jsxgraphcore.js"></script>
+{% endblock %}
+
+{% block body %}
+<div class="row">
+    <div class="ui grid">
+        <div class="eight wide column">
+
+            <form id="form" class="ui form">
+                <div class="field">
+                    <label for="equation">Expresión</label>
+                    <input id="equation" name="equation" type="text">
+                </div>
+                <div class="field">
+                    <label for="a">a</label>
+                    <input id="a" name="a" type="text">
+                </div>
+                <div class="field">
+                    <label for="b">b</label>
+                    <input id="b" name="b" type="text">
+                </div>
+                <div class="field">
+                    <label for="level">Niveles de profundidad</label>
+                    <input id="level" name="level" type="text">
+                </div>
+              <div class="ui submit button">Submit</div>
+              <div class="ui error message"></div>
+            </form>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="eight wide column">
+        <table class="ui celled small table">
+            <tbody id="body-table"></tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
