@@ -12,6 +12,7 @@ from lib.newton_raphson import NewtonRaphson
 from lib.regula_falsi import RegulaFalsi
 from lib.secant import Secant
 from lib.simpson import Simpson
+from lib.trapezoidal_rule import Trapezoidal
 
 app = Flask(__name__)
 
@@ -175,6 +176,30 @@ def calcular_diferencia_finita():
         return jsonify(sections=dff.solve_finite_down(x, error))
 
 
+@app.route('/trapecio')
+def trapecio():
+    return render_template('trapecio.html')
+
+
+@app.route('/calcular_trapecio', methods=['POST'])
+def calcular_trapecio():
+    equation = str(request.form['equation'])
+    a = float(request.form['a'])
+    b = float(request.form['b'])
+    n = int(request.form['n'])
+    val = int(request.form['t'])
+    trp = Trapezoidal(equation, 'x')
+
+    if val == 0:
+        return jsonify(sections=str(trp.solve_with_simple_trapezoidal(a, b)))
+    else:
+        return jsonify(sections=str(trp.solve_with_composed_trapezoidal(a, b, n)))
+
+
+@app.route('/simpson')
+def simpson():
+    return render_template('simpson.html')
+
 @app.route('/calcular_simpson', methods=['POST'])
 def calcular_simpson():
     equation = str(request.form['equation'])
@@ -188,16 +213,6 @@ def calcular_simpson():
         return jsonify(sections=smp.solve_with_simple_simpson(a, b))
     else:
         return jsonify(sections=smp.solve_with_3_8_simpson(a, b, n))
-
-
-@app.route('/trapecio')
-def trapecio():
-    return render_template('trapecio.html')
-
-
-@app.route('/simpson')
-def simpson():
-    return render_template('simpson.html')
 
 
 if __name__ == "__main__":
