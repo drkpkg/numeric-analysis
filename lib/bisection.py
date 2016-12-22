@@ -16,10 +16,9 @@ class Bisection(Equation):
                     break
                 interval = self.get_interval(section_a, section_b)
                 f_interval = self.solve(interval)
-                if n == 0:
-                    error = 100.0
-                else:
+                if n > 0:
                     error = self.get_percentual_error(section_a, interval)
+
                 self.sections.append({'a': str(section_a),
                                       'b': str(section_b),
                                       'interval': str(interval),
