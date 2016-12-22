@@ -25,11 +25,8 @@ class Equation(object):
         return actual - last
 
     @staticmethod
-    def get_percentual_error(actual, last):
-        try:
-            return math.fabs((last - actual) / last) * 100
-        except Exception:
-            return float(0)
+    def get_percentual_error(last, actual):
+        return math.fabs((last - actual) / last) * 100
 
     def solve(self, section):
         return self.equation.subs({self.variable: section})
