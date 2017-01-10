@@ -10,12 +10,15 @@ class Bisection(Equation):
     def solve_bisection(self, section_a, section_b, error_limit):
         try:
             error = 100
+            n = 0
             while True:
                 if error <= error_limit:
                     break
                 interval = self.get_interval(section_a, section_b)
                 f_interval = self.solve(interval)
-                error = self.get_percentual_error(section_a, section_b)
+                if n > 0:
+                    error = self.get_percentual_error(section_a, interval)
+
                 self.sections.append({'a': str(section_a),
                                       'b': str(section_b),
                                       'interval': str(interval),
@@ -28,6 +31,8 @@ class Bisection(Equation):
                         section_b = interval
                     else:
                         section_a = interval
+
+                n+=1
         except TypeError:
             print("Expression cannot be formatted")
 
