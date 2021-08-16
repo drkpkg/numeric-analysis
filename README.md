@@ -1,10 +1,10 @@
 # numeric-analysis
 Numeric analysis algorithms library
 
-##Abstract
+## Abstract
 This is a library set for numerical analysis, in this set you will find many methods: 
 
-##Range methods
+## Range methods
 
  - **Bisection**
  - **Regula Falsi**
@@ -12,21 +12,21 @@ This is a library set for numerical analysis, in this set you will find many met
  - **Secant**
  - **Fixed Point**
 
-##Polinomy simplification
+## Polinomy simplification
 
  - **Horner**
  - **Gauss**
  - **Jacobi**
  - **Lagrange Polinomy**
 
-##Numeric Integration
+## Numeric Integration
 
  - **Finite Difference**
  - Numeric Integration - Newton Rule
  - **Trapezoidal rule**
  - **Simpson 3/8**
 
-#Pending
+# Pending
 
  - Romberg
  - Gauss - Integration
